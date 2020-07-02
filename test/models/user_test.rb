@@ -9,7 +9,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'user with invalid email should be invalid' do
-    user = User.new(email: 'test', password_digest: 'test')
+    user = User.new(email: '', password_digest: 'test')
     assert_not user.valid?
   end
 

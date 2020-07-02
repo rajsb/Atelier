@@ -32,6 +32,8 @@ class Api::V1::UsersController < ApplicationController
   # DELETE /users/1
   def destroy
     @user.destroy
+
+    # sends response with only headers to the browser. It is shorthand for render nothing: true, status: :ok
     head 204
   end
 

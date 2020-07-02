@@ -11,7 +11,8 @@ class JsonWebToken
   def self.decode(token)
     decoded = JWT.decode(token, SECRET_KEY).first
 
-    # This class is provided by rails. It allows us to retrieve a value of a Hash with a Symbol or String
+    # This class is provided by rails. It allows us to retrieve a value of a Hash with a Symbol or String.
+    # So we are creating a hash with decoded payload
     HashWithIndifferentAccess.new decoded
   end
 end

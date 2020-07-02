@@ -6,6 +6,8 @@ class MockController
 
   def initialize
     mock_request = Struct.new(:headers)
+
+    # mock_request is a struct which contains a headers attribute of type hash
     self.request = mock_request.new({})
   end
 end
